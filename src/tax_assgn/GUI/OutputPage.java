@@ -36,8 +36,8 @@ public class OutputPage extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("OUTPUT PANEL FOR THE JUNKY TAX APPLICATION");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 490, 30));
+        jLabel1.setText("TAX_CALC. OUTPUT PANEL");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 490, 30));
 
         displayHead.setEditable(false);
         displayHead.setColumns(20);

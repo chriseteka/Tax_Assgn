@@ -44,8 +44,8 @@ public class outputPage2 extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("OUTPUT PANEL FOR THE JUNKY TAX APPLICATION");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 490, 30));
+        jLabel1.setText("TAX_CALC. OUTPUT PANEL");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 490, 30));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 630, 10));
 
         displayHead.setEditable(false);
@@ -137,7 +137,7 @@ public class outputPage2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        tax_assgn.GUI.firstPage home = new tax_assgn.GUI.firstPage();
+        
         int result = JOptionPane.showConfirmDialog(this, "DO YOU WANT TO GO BACK TO HOME", "BACK OPTION PANEL", JOptionPane.OK_CANCEL_OPTION);
         if(result == JOptionPane.OK_OPTION){
             this.dispose();

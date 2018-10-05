@@ -26,7 +26,7 @@ public class StatusSingle
     public double taxPayable()
     {
         System.out.println("ENTER YOUR INCOME: ");
-        if(input.hasNextDouble()) //CHECKS IF INPUT IS A VALID NUMBER
+        if(input.hasNextDouble()) //CHECKS IF INPUT IS A VALID NUMBER(DOUBLE)
         {
             double income = input.nextDouble(); //ASSIGNS THE VALUE ENTERED TO VARIABLE INCOME
 

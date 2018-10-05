@@ -27,5 +27,7 @@ public class TaxRates {
        
        return allTaxRates;
     }
+    
+    
     //ADD MORE RATES SHOULD YOU WANT TO, SPECIFYING IT YEAR
 }

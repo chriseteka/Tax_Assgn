@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 
 public class firstPage extends javax.swing.JFrame {
     
-    //IMPORTING ALL THE REQUIRED CLASSES
+    //CREATING INSTANCE OF A CLASS I NEED.
     tax_assgn.ExceptionalCases exp = new tax_assgn.ExceptionalCases();
     
     public firstPage() {
@@ -41,8 +41,8 @@ public class firstPage extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jLabel1.setText("ONE KIND JUNKY TAX CALCULATION APPLICATION.");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 490, 36));
+        jLabel1.setText("TAX_CALC.");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 490, 36));
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -64,7 +64,7 @@ public class firstPage extends javax.swing.JFrame {
         showFilingStatus.setColumns(20);
         showFilingStatus.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         showFilingStatus.setRows(5);
-        showFilingStatus.setText("CHOOSE FILING STATUS BY THEIR NUMBER(S)\n0. QUERY\n1. SINGLE\n2. MARRIED FILING JOINTLY\n3. MARRIED FILING SEPERATELY\n4. HEAD OF HOUSEHOLD\n5. OTHERS\n6. EXIT APPLICATION");
+        showFilingStatus.setText("CHOOSE FILING STATUS BY THEIR NUMBER(S)\n0. QUERY\n1. SINGLE\n2. MARRIED FILING JOINTLY\n3. MARRIED FILING SEPERATELY\n4. HEAD OF HOUSEHOLD\n5. LISTINGS\n6. EXIT APPLICATION");
         showFilingStatus.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         showFilingStatus.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         showFilingStatus.setDisabledTextColor(new java.awt.Color(0, 0, 0));
@@ -120,7 +120,7 @@ public class firstPage extends javax.swing.JFrame {
         if(!(choice.getText().equals(""))) //CHECKS TO BE SURE THE TEXTBOX IS NOT EMPTY
         {
             String inputedString = choice.getText().replaceAll("//s", "");
-            if(inputedString.length() == 1) //CHECKS IF THE INPUT IS A CHAR(AN ALPHABET)
+            if(inputedString.length() == 1) //CHECKS IF THE INPUT IS A SINGLE CHARACTER
             {
                 try //CHECKS IF THE INPUT IS AN ALPHABET
                 {
@@ -129,7 +129,7 @@ public class firstPage extends javax.swing.JFrame {
                     
                     if(selectedChoice >= 0) //CHECKS IF THE INTEGER IS POSITIVE OR ZERO
                     {
-                        if(selectedChoice <= 6) //CHECKS IF THE INTEGER IS NOT MORE THAN SIX
+                        if(selectedChoice <= 6) //CHECKS TO BE SURE THE INTEGER IS NOT MORE THAN SIX
                         {
                             if(selectedChoice != 6) //CHECKS IF THE INTEGER IS NOT SIX
                             {

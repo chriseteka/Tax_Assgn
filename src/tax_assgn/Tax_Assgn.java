@@ -8,7 +8,7 @@ public class Tax_Assgn {
 
     public static void main(String[] args) 
     {
-        //THIS STARTS UP THE CONSOLE APPLICATION
+        //THIS STARTS UP THE APPLICATION ON CONSOLE
 //        beginExecution();
         
         //THIS STARTS UP THE GUI APPLICATION
@@ -152,16 +152,12 @@ public class Tax_Assgn {
             }
             else
             {
-                System.out.println("YOU HAVE ENTERED AN INVALID CHOICE");
-                System.out.println("");
-                Tax_Assgn.beginExecution();
+                JOptionPane.showMessageDialog(null, "ERROR, CAN'T PROCESS YOUR INPUT");
             }
         }
         else
         {
-            System.out.println("YOU MAY HAVE ENTERED AN ALPHABET WHERE NUMERIC REPLY IS EXPECTED");
-            System.out.println("");
-            Tax_Assgn.beginExecution();
+            JOptionPane.showMessageDialog(null, "ERROR, NEGATIVE NUMBER ENTERED");
         }
     }
 }

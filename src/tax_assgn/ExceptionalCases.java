@@ -132,16 +132,17 @@ public class ExceptionalCases
             return null;
     }
     
-    //THIS WORKS WITH THE BOTH THE GUI AND THE CONSOLE, A CASE WHERE THE USER TYPES IN TWO FILING STATUS, e.g: 2,4 AND HIS INCOME
+    //THIS WORKS WITH BOTH THE GUI AND THE CONSOLE, A CASE WHERE THE USER TYPES IN TWO FILING STATUS, e.g: 2,4 AND HIS INCOME
     public List<Double> computeMultipleInput(int firstInput, int secondInput, double income)
     {
         int firstStatus = firstInput, secondStatus = secondInput;
-        if (firstStatus > 0 && secondStatus > 0)
+        if (firstStatus > 0 && secondStatus > 0) //CHECKS TO BE SURE BOTH NUMBERS ARE POSITIVE
         {
-            if(firstStatus <= 4 && secondStatus <= 4)
+            if(firstStatus <= 4 && secondStatus <= 4)//CHECKS TO BE SURE BOTH NUMBERS ARE LESS OR EQUAL TO 4
             {
-                if(firstStatus != secondStatus)
+                if(firstStatus != secondStatus)// CHECKS TO BE SURE BOTH NUMBERS ARE NOT THE SAME
                 {
+                    //THIS FIRST IF BLOCK CHECKS THE FIRST NUMBER IN THE INPUTTED PAIR
                     if(firstStatus == 1)
                     {
                         single.fixedPayableTax(income);
@@ -162,6 +163,8 @@ public class ExceptionalCases
                         headOfHousehold.fixedPayableTax(income);
                         System.out.println("STATUS(4): HEAD OF HOUSEHOLD, TAX IS: " + headOfHousehold.rtax);
                     }
+                    
+                    //THIS CHECKS THE SECOND NUMBER IN THE PAIR
                     if(secondStatus == 1)
                     {
                         single.fixedPayableTax(income);
@@ -186,6 +189,7 @@ public class ExceptionalCases
                 }
                 else if (firstStatus == secondStatus)
                 {
+                    JOptionPane.showMessageDialog(null, "YOU HAVE INPUTTED SAME NUMBERS, PLEASE TRY AGAIN WITH DIFFERENT NUMBERS");
                     System.out.println("YOU INPUTTED SAME NUMBERS, PLEASE TRY AGAIN WITH DIFFERENT NUMBERS");
                     System.out.println("");
 //                    Tax_Assgn.beginExecution();
@@ -193,6 +197,7 @@ public class ExceptionalCases
             }
                 else
             {
+                JOptionPane.showMessageDialog(null, "YOU HAVE INPUTTED A PAIR OF NUMBER THAT IS OUT OF RANGE, BOTH NUMBERS MUST BE WITHIN 1 AND 4");
                 System.out.println("YOU HAVE INPUTTED A PAIR OF NUMBER THAT IS OUT OF RANGE, BOTH NUMBERS MUST BE WITHIN 1 AND 4");
                 System.out.println("");
 //                Tax_Assgn.beginExecution();
@@ -200,6 +205,7 @@ public class ExceptionalCases
         }
         else
         {
+            JOptionPane.showMessageDialog(null, "ERROR, YOU HAVE TO INPUT POSITIVE NUMBERS");
             System.out.println("ERROR, YOU HAVE TO INPUT POSITIVE NUMBERS");
             System.out.println("");
 //            Tax_Assgn.beginExecution();
@@ -207,7 +213,7 @@ public class ExceptionalCases
         return null;
     }
     
-    //THIS WORKS WITH THE CONSOLE, A CASE WHERE BOTH FILING STATUS AND INCOME ARE BOTH ZEROS
+    //THIS WORKS WITH THE CONSOLE, A CASE WHERE BOTH FILING STATUS AND INCOME ARE ZEROS
     public List<Double> specialCaseZero(double income)
     {
         if(income == 0)
